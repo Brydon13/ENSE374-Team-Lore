@@ -1,4 +1,4 @@
-<h2>Project Description</h2>
+<h2>Project Planning</h2>
 This directory contains all files related to project planning. Please check out our detailed MVPs and KanBan boards under the "Projects" tab.
 <br/>
 <br/>
