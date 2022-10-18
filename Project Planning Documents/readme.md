@@ -1,1 +1,5 @@
-Put stuff in here temporarily. I will reorgznie the github when we are done to make it understandable for everyone
+
+<h2>Project Planning Documents</h2>
+This directory contains documents relating to project planning. Please check out our detailed MVPs and KanBan boards under the "Projects" tab. 
+
+We have recorded a vlog to go over these documents. You can view it at: 
