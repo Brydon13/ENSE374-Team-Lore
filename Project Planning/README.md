@@ -1,0 +1,5 @@
+<h2>Project Description</h2>
+This directoty contains all files related to project planning. Please check out our detailed MVPs and KanBan boards under the "Projects" tab.
+<br/>
+<br/>
+We have recorded a vlog dicussing the items in this directory. You can view it at:
