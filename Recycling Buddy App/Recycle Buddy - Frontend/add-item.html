@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Add an Item</title>
+  </head>
+  <body>
+    <header id="header">
+      <image id="header-logo" src="./images/Pastel_Green_Logo.png"></image>
+      <div class="nav-links-container">
+        <div>About Us</div>
+        <div>Contact Us</div>
+        <div>FAQ</div>
+      </div>
+    </header>
+    <div class="page-container">
+      <div class="form-container">
+        <div class="title"><div>Add an Item</div></div>
+        <form class="flex-col" id="form-container">
+          <div>
+            <div>Title:</div>
+            <input type="text" class="input-box" />
+          </div>
+          <div>
+            <div>Manufacturer:</div>
+            <input type="text" class="input-box" />
+          </div>
+          <div class="recyclable-question">
+            Is it recyclable?
+            <input type="checkbox" />
+            <span>Yes</span>
+            <input type="checkbox" />
+            <span>No</span>
+          </div>
+          <div>
+            <div>Info:</div>
+            <textarea id="textarea" class="input-box"></textarea>
+          </div>
+          <input id="add-location" type="button" value="Add Location" />
+          <input type="submit" class="black-btn" />
+        </form>
+      </div>
+    </div>
+    <footer id="footer">
+      <image id="footer-logo" src="./images/white-logo.png"></image>
+    </footer>
+  </body>
+</html>
