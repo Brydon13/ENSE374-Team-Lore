@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 30%;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.accordion {
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border-radius: 5px;
+}
+
+.container-sm {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.card-body {
+    margin: auto;
+    width: 33%
+}
+
+.container-sm a {
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    font-size: small;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: blue;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.container-lg {
+    margin: auto;
+    width: 50%;
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    padding: 10px;
+}
+
+.form-button{
+    background-color: transparent;
+}
+
+.line-through input{
+    text-decoration: line-through;
+}
+
+.center-button {
+    margin: auto;
+}
+
