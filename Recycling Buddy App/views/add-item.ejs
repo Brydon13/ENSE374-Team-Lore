@@ -4,18 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Add an Item</title>
   </head>
   <body>
-    <header id="header">
-      <image id="header-logo" src="./images/Pastel_Green_Logo.png"></image>
-      <div class="nav-links-container">
-        <div>About Us</div>
-        <div>Contact Us</div>
-        <div>FAQ</div>
-      </div>
-    </header>
+    <%- include("partials/navbar.ejs") -%>
     <div class="page-container">
       <div class="form-container">
         <div class="title"><div>Add an Item</div></div>
@@ -44,8 +37,6 @@
         </form>
       </div>
     </div>
-    <footer id="footer">
-      <image id="footer-logo" src="./images/white-logo.png"></image>
-    </footer>
+    <%- include("partials/footer.ejs") -%>
   </body>
 </html>

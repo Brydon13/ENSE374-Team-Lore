@@ -23,8 +23,28 @@ app.use(express.static("public"));
 
 // Simple server operation
 
-app.get("/", (req, res) => {
-  res.send(`<h1>Test<h1/>`);
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+app.get("/add-item", (req, res) => {
+  res.render("add-item");
+});
+
+app.get("/profile", (req, res) => {
+  res.render("profile");
+});
+
+app.get("/index", (req, res) => {
+  res.render("index");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
 app.use(`/users`, userRoutes);

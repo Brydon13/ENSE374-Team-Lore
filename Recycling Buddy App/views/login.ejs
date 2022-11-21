@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include("partials/navbar.ejs") -%>
+    <div class="page-container">
+      <div class="form-container">
+        <div class="title"><div>Login</div></div>
+        <form class="flex-col" id="form-container">
+          <div>
+            <div>Email:</div>
+            <input type="text" class="input-box" />
+          </div>
+          <div>
+            <div>Password:</div>
+            <input type="text" class="input-box" />
+          </div>
+          <input type="submit" class="black-btn" />
+          <div class="foot-note">
+            <div>Dont Have an Account? <a href="/">Signup</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <%- include("partials/footer.ejs") -%>
+  </body>
+</html>
