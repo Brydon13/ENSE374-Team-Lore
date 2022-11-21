@@ -43,10 +43,6 @@ app.get("/index", (req, res) => {
   res.render("index");
 });
 
-app.get("/login", (req, res) => {
-  res.render("login");
-});
-
 app.use(`/users`, userRoutes);
 app.use(`/recyclables`, recyclableRoutes);
 // app.use(`/recycling-centres`, recyclingCentreRoutes);
