@@ -1,5 +1,4 @@
 import express from "express";
-
 const router = express.Router();
 
 import {
@@ -8,16 +7,14 @@ import {
   create,
   update,
   remove,
-  login,
-} from "../controllers/userController.js";
+} from "../controllers/recyclableController.js";
 
-// BASE_URL: /users
+// BASE_URL: /recyclables
 
-router.route("/index").get(index);
+router.route("/index").post(index);
 router.route("/show").post(show);
 router.route("/create").post(create);
 router.route("/update").post(update);
 router.route("/remove").post(remove);
-router.route("/login").post(login);
 
 export default router;
