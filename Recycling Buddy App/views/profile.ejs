@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
     <title>UserProfile</title>
@@ -22,7 +22,13 @@
               <img src="/images/<%= User.avatar %>" alt="Avatar" class="rounded-circle" width="150">
                 <div class="mt-3">
                   <h4><%= User.username %></h4>
-                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal">View Account</button>
+                  <button 
+                  type="button" 
+                  class="btn btn-outline-primary" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#myModal">
+                  View Account
+                  </button>
                 </div>
             </div>
           </div>

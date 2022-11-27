@@ -10,37 +10,39 @@
     <title>Item</title>
 </head>
 <body class="itempage">
-    <div class="container">
-        <div class="main-body">
-            <div class="col md-12 text-center text-light">
-                <h5>You are one step closer to make your surroundings more friendly</h5>
-            </div>
-            <form id="search-form" method="POST" action="/temp">
-            <input
-                type="search"
-                name="keyword"
-                id="search-box"
-                placeholder="Search you recycle item here"
-                aria-label="Search through site content"
-          />
-          <input type="submit" id="search-btn" value="Search" />
-        </form>
-        <hr>
-        <div class="row bg-white">
-            <div class="col-12 col-md-4">
-              <img src="/uploads/<%- Recyclable.image %>" class="img-fluid" style="top: 20px;" alt="<%- Recyclable.name %>" >
-            </div>
-            <div class="col-12 col-md-8">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Results</h1>
-                    </div>
-                <div class="col-12" style="white-space: pre-line;">
-                    <h4><%- Recyclable.info %>From canned food to soda and aerosol cans, all metal cans -- including aluminum and steel -- are infinitely recyclable. According to the American and Iron Steel Institute, more than 90% of the co-products from the steelmaking process are reused or recycled.</h4>
-                </div>    
-              </div>
-            </div>
+  <div class="container">
+    <div class="main-body">
+      <div class="col md-12 text-center text-light">
+        <h5>You are one step closer to make your surroundings more friendly</h5>
+      </div>
+      <form id="search-form" method="POST" action="/temp">
+      <input
+      type="search"
+      name="keyword"
+      id="search-box"
+      placeholder="Search you recycle item here"
+      aria-label="Search through site content"/>
+      <input 
+      type="submit" 
+      id="search-btn" 
+      value="Search" />
+      </form>
+      <hr>    
+      <div class="row bg-white">
+        <div class="col-12 col-md-4">
+          <img src="/uploads/<%- Recyclable.image %>" class="img-fluid" style="top: 20px;" alt="<%- Recyclable.name %>" >
         </div>
+      <div class="col-12 col-md-8">
+        <div class="row">
+          <div class="col-12">
+            <h1>Results</h1>
+          </div>
+          <div class="col-12" style="white-space: pre-line;">
+            <h4><%- Recyclable.info %>From canned food to soda and aerosol cans, all metal cans -- including aluminum and steel -- are infinitely recyclable. According to the American and Iron Steel Institute, more than 90% of the co-products from the steelmaking process are reused or recycled.</h4>
+          </div>    
         </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
