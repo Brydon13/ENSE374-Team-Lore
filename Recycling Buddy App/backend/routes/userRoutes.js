@@ -1,15 +1,15 @@
-import express from "express";
+const express = require("express");
 
 const router = express.Router();
 
-import {
+const {
   index,
   show,
   create,
   update,
   remove,
   login,
-} from "../controllers/userController.js";
+} = require("../controllers/userController.js");
 
 // BASE_URL: /users
 
@@ -20,4 +20,4 @@ router.route("/update").post(update);
 router.route("/remove").post(remove);
 router.route("/login").post(login);
 
-export default router;
+exports.router = router;

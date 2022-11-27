@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const recyclingCentreSchema = new mongoose.Schema(
   {
@@ -27,4 +27,4 @@ const RecyclingCentre = mongoose.model(
   recyclingCentreSchema
 );
 
-export default RecyclingCentre;
+exports.RecyclingCentre = RecyclingCentre;
