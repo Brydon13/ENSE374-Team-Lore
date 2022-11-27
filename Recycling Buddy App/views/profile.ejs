@@ -43,32 +43,21 @@
               </div>
             </div>
             <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h3> <%= Recyclable.title %> </h3>
-              </div>
-              <div class="col-sm-9 text-dark">
-                <h3> <%= Recyclable.info %></h3>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h3> <%= Recyclable.title %> </h3>
-              </div>
-              <div class="col-sm-9 text-dark">
-                <h3> <%= Recyclable.info %></h3>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <h3> <%= Recyclable.title %> </h3>
-              </div>
-              <div class="col-sm-9 text-dark">
-                <h3> <%= Recyclable.info %></h3>
-              </div>
-            </div>
+            <% if(Recyclable != '') { %>
+              <% Recyclable.forEach(function(Recyclable){ %>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h3> <%= Recyclable.title %> </h3>
+                  </div>
+                  <div class="col-sm-9 text-dark">
+                    <h3> <%= Recyclable.info %></h3>
+                  </div>
+                  <hr>
+                  <% }) %>
+                  <% } else { %>
+                    <p>No browse history, check something immediately!</p>
+                  <% } %> 
+                </div>
           </div>
         </div>
       </div>
