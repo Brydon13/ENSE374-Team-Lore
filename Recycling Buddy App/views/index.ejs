@@ -6,23 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Recycling Buddy</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <%- include("partials/navbar.ejs") -%>
-    <div id="home-container">
-      <div>Search for an Item:</div>
-      <form id="search-form" method="POST" action="/temp">
-        <input
-          type="search"
-          name="keyword"
-          id="search-box"
-          placeholder="Search you recycle item here"
-          aria-label="Search through site content"
-        />
-        <input type="submit" id="search-btn" value="Search" />
-      </form>
-      <div>Results:</div>
+  <body class="flex-wrapper">
+    <div>
+      <%- include("partials/navbar.ejs") -%>
+      <div id="home-container">
+        <div class="homepage-text">
+          You are helping us move towards a cleaner future
+        </div>
+        <form
+          id="search-form"
+          method="POST"
+          action="/temp"
+          class="input-group mb-3"
+        >
+          <input
+            type="search"
+            name="keyword"
+            class="form-control"
+            id="search-box"
+            placeholder="Search for an item here"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Search</button>
+          </div>
+        </form>
+        <div class="results-container">
+          <div>Results:</div>
+          <%- results.forEach(item => {}) -%> <%-
+          include("partials/search-result.ejs", {item : item }) -%> <%- }) -%>
+        </div>
+      </div>
     </div>
+
     <%- include("partials/footer.ejs") -%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

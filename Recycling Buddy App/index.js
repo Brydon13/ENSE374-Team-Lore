@@ -40,7 +40,16 @@ app.get("/profile", (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-  res.render("index");
+  res.render("index", { results: [] });
+});
+
+app.get("/itempage", (req, res) => {
+  res.render("itempage");
+});
+
+app.get("/search", (req, res) => {
+  const results = [];
+  res.render("index", { results: results });
 });
 
 app.use(`/users`, userRoutes);
