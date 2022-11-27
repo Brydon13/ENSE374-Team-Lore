@@ -1,5 +1,5 @@
-import asyncHandler from "express-async-handler";
-import Recyclable from "../models/Recyclable.js";
+const asyncHandler = require("express-async-handler");
+const Recyclable = require("../models/Recyclable.js");
 
 /**
  * @desc    Get search results from query
@@ -20,4 +20,4 @@ const search = asyncHandler(async (req, res) => {
   }
 });
 
-export { search };
+exports.search = search;

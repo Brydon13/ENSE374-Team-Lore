@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const recyclableSchema = new mongoose.Schema(
   {
@@ -32,4 +32,4 @@ const recyclableSchema = new mongoose.Schema(
 
 const Recyclable = mongoose.model("Recyclable", recyclableSchema);
 
-export default Recyclable;
+exports.Recyclable = Recyclable;

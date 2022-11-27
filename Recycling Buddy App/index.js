@@ -1,9 +1,12 @@
-import express from "express";
-import mongoose from "mongoose";
+const express = require("express");
+const mongoose = require("mongoose");
 
-import userRoutes from "./backend/routes/userRoutes.js";
-import recyclableRoutes from "./backend/routes/recyclableRoutes.js";
-import searchRoutes from "./backend/routes/searchRoutes.js";
+const userRoutes = require("./backend/routes/userRoutes.js");
+const recyclableRoutes = require("./backend/routes/recyclableRoutes.js");
+const searchRoutes = require("./backend/routes/searchRoutes.js");
+const { initializeDB, updateJson } = require("./backend/utils/jsonSyncing.js");
+const { Recyclable } = require("./backend/models/Recyclable.js");
+const { User } = require("./backend/models/User.js");
 
 // this is a canonical alias to make your life easier, like jQuery to $.
 const app = express();
@@ -17,6 +20,8 @@ mongoose.connect("mongodb://localhost:27017/recycleBuddy", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+initializeDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -53,10 +58,10 @@ app.get("/search", (req, res) => {
   res.render("index", { results: results });
 });
 
-app.use(`/users`, userRoutes);
-app.use(`/recyclables`, recyclableRoutes);
+// app.use(`/users`, userRoutes);
+// app.use(`/recyclables`, recyclableRoutes);
 // app.use(`/recycling-centres`, recyclingCentreRoutes);
-app.use(`/search`, searchRoutes);
+// app.use(`/search`, searchRoutes);
 
 app.listen(port, () => {
   // template literal

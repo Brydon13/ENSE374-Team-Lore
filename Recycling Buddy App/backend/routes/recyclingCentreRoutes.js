@@ -1,13 +1,13 @@
-import express from "express";
+const express = require("express");
 const router = express.Router();
 
-import {
+const {
   index,
   show,
   create,
   update,
   remove,
-} from "../controllers/recyclingCentreController.js";
+} = require("../controllers/recyclingCentreController.js");
 
 // BASE_URL: /recycling-centres
 
@@ -17,4 +17,4 @@ router.route("/create").post(create);
 router.route("/update").post(update);
 router.route("/remove").post(remove);
 
-export default router;
+exports.router = router;

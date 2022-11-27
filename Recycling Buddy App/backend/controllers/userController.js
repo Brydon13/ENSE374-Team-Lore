@@ -1,5 +1,5 @@
-import asyncHandler from "express-async-handler";
-import User from "../models/User.js";
+const asyncHandler = require("express-async-handler");
+const User = require("../models/User.js");
 
 /**
  * @desc    Get all users
@@ -97,4 +97,9 @@ const login = asyncHandler(async (req, res) => {
   }
 });
 
-export { index, show, create, update, remove, login };
+exports.index = index;
+exports.show = show;
+exports.create = create;
+exports.update = update;
+exports.remove = remove;
+exports.login = login;

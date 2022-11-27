@@ -1,5 +1,5 @@
-import asyncHandler from "express-async-handler";
-import Recyclable from "../models/Recyclable.js";
+const asyncHandler = require("express-async-handler");
+const Recyclable = require("../models/Recyclable.js");
 
 /**
  * @desc    Get all recyclables
@@ -80,4 +80,8 @@ const remove = asyncHandler(async (req, res) => {
   }
 });
 
-export { index, show, create, update, remove };
+exports.index = index;
+exports.show = show;
+exports.create = create;
+exports.update = update;
+exports.remove = remove;

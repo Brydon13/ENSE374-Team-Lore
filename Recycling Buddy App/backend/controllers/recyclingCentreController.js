@@ -1,4 +1,4 @@
-import asyncHandler from "express-async-handler";
+const asyncHandler = require("express-async-handler");
 
 // ----------> MVP2 <-----------
 
@@ -32,4 +32,8 @@ const update = asyncHandler(async (req, res) => {});
  */
 const remove = asyncHandler(async (req, res) => {});
 
-export { index, show, create, update, remove };
+exports.index = index;
+exports.show = show;
+exports.create = create;
+exports.update = update;
+exports.remove = remove;
