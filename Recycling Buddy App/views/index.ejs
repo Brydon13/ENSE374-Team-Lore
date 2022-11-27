@@ -40,9 +40,9 @@
           </div>
         </form>
         <div class="results-container">
-          <div>Results:</div>
-          <%- results.forEach(item => {}) -%> <%-
-          include("partials/search-result.ejs", {item : item }) -%> <%- }) -%>
+          <div class="results-title">Results:</div>
+          <%- include("partials/search-result.ejs") -%> <%- results.map(item =>
+          include("partials/search-result.ejs")).join(' ') -%>
         </div>
       </div>
     </div>

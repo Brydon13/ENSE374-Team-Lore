@@ -40,7 +40,8 @@ app.get("/profile", (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-  res.render("index", { results: [] });
+  const results = [1, 2, 3];
+  res.render("index", { results: results });
 });
 
 app.get("/itempage", (req, res) => {
@@ -48,7 +49,7 @@ app.get("/itempage", (req, res) => {
 });
 
 app.get("/search", (req, res) => {
-  const results = [];
+  const results = [1, 2, 3];
   res.render("index", { results: results });
 });
 
