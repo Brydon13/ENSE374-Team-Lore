@@ -224,3 +224,21 @@ body {
 .results-title {
   font-size: 25px;
 }
+
+.flex-row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+#notice-something-missing {
+  margin-right: 10px;
+}
+
+.no-results {
+  font-size: 20px;
+  margin-top: 20px;
+}

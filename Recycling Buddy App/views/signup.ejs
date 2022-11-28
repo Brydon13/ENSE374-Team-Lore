@@ -19,22 +19,27 @@
       <div class="page-container">
         <div class="form-container">
           <div class="title"><div>Signup</div></div>
-          <form class="flex-col" id="form-container">
+          <form
+            class="flex-col"
+            method="post"
+            action="/signup"
+            id="form-container"
+          >
             <div>
               <div>Email:</div>
-              <input type="text" class="input-box" />
+              <input type="text" name="email" class="input-box" />
             </div>
             <div>
               <div>Username:</div>
-              <input type="text" class="input-box" />
+              <input type="text" name="username" class="input-box" />
             </div>
             <div>
               <div>Password:</div>
-              <input type="text" class="input-box" />
+              <input type="text" name="password" class="input-box" />
             </div>
             <div>
               <div>Confirm Password:</div>
-              <input type="text" class="input-box" />
+              <input type="text" name="cpass" class="input-box" />
             </div>
             <input type="submit" class="btn btn-success" />
             <div class="foot-note">
