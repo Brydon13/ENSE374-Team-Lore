@@ -40,9 +40,25 @@
           </div>
         </form>
         <div class="results-container">
-          <div class="results-title">Results:</div>
-          <%- include("partials/search-result.ejs") -%> <%- results.map(item =>
-          include("partials/search-result.ejs")).join(' ') -%>
+          <div class="flex-row space-between">
+            <div class="results-title">Results:</div>
+            <div class="flex-row">
+              <span id="notice-something-missing"
+                >Notice Something Missing?
+              </span>
+              <form method="get" action="/add-item">
+                <button class="btn btn-success" type="submit">
+                  Add an Item
+                </button>
+              </form>
+            </div>
+          </div>
+          <% if(results.length == 0) { %> <% if(searched) { %>
+          <div class="no-results">No Results</div>
+          <% } else { %>
+          <div class="no-results">(Search Results Will Be Displayed Here)</div>
+          <% } %> <% } else { %> <%- results.map(item =>
+          include("partials/search-result.ejs")).join(' ') -%> <% } %>
         </div>
       </div>
     </div>

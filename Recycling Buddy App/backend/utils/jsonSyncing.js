@@ -24,7 +24,8 @@ function readJson(filename) {
 }
 
 async function initializeDB() {
-  console.log("here");
+  await User.deleteMany();
+  await Recyclable.deleteMany();
   let db = readJson("../db.json");
   let users = db.users ?? [];
   let recyclables = db.recyclables ?? [];
