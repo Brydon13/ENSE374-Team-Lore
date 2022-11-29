@@ -1,4 +1,7 @@
 <div class="single-result-container">
-  <div class="single-result-title">Title</div>
-  <div>asmdkmaskdmasdmamsd sad k asd k asd askd kas kd askd kas dk askd</div>
+  <form method="post" action="/view-details">
+    <button class="single-result-title"><%= item.title %></button>
+    <input type="hidden" value="<%= item._id %>" name="_id" />
+    <div><%= item.info %></div>
+  </form>
 </div>

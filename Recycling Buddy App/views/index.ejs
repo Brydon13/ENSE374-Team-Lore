@@ -15,7 +15,7 @@
   </head>
   <body class="flex-wrapper">
     <div>
-      <%- include("partials/navbar.ejs") -%>
+      <%- include("partials/navbar.ejs", {user: user}) -%>
       <div id="home-container">
         <div class="homepage-text">
           You are helping us move towards a cleaner future
@@ -23,7 +23,7 @@
         <form
           id="search-form"
           method="POST"
-          action="/temp"
+          action="/search"
           class="input-group mb-3"
         >
           <input
@@ -42,7 +42,7 @@
         <div class="results-container">
           <div class="flex-row space-between">
             <div class="results-title">Results:</div>
-            <div class="flex-row">
+            <div class="flex-row align-center">
               <span id="notice-something-missing"
                 >Notice Something Missing?
               </span>
@@ -58,7 +58,8 @@
           <% } else { %>
           <div class="no-results">(Search Results Will Be Displayed Here)</div>
           <% } %> <% } else { %> <%- results.map(item =>
-          include("partials/search-result.ejs")).join(' ') -%> <% } %>
+          include("partials/search-result.ejs", {item: item})).join(' ') -%> <%
+          } %>
         </div>
       </div>
     </div>
