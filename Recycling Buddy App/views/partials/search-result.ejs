@@ -1,7 +1,15 @@
 <div class="single-result-container">
-  <form method="post" action="/view-details">
-    <button class="single-result-title"><%= item.title %></button>
-    <input type="hidden" value="<%= item._id %>" name="_id" />
-    <div><%= item.info %></div>
-  </form>
+  <div class="flex-row space-between">
+    <form method="post" action="/view-details">
+      <button class="single-result-title"><%= item.title %></button>
+      <input type="hidden" value="<%= item._id %>" name="_id" />
+    </form>
+    <% if(edit) { %>
+    <form method="post" action="/edit-item">
+      <button class="btn btn-success" type="submit">Edit</button>
+      <input type="hidden" value="<%= item._id %>" name="_id" />
+    </form>
+    <% } %>
+  </div>
+  <div><%= item.info %></div>
 </div>

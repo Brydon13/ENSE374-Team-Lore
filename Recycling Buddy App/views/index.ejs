@@ -58,8 +58,8 @@
           <% } else { %>
           <div class="no-results">(Search Results Will Be Displayed Here)</div>
           <% } %> <% } else { %> <%- results.map(item =>
-          include("partials/search-result.ejs", {item: item})).join(' ') -%> <%
-          } %>
+          include("partials/search-result.ejs", {item: item, edit:
+          false})).join(' ') -%> <% } %>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <title>Add an Item</title>
+    <title>Profile</title>
   </head>
   <body class="flex-wrapper">
     <div>
@@ -33,8 +33,8 @@
           <% if(posts.length == 0) { %>
           <div class="no-results">You have not made any posts</div>
           <% } else { %> <%- posts.map(item =>
-          include("partials/search-result.ejs", {item: item})).join(' ') -%> <%
-          } %>
+          include("partials/search-result.ejs", {item: item, edit:
+          true})).join(' ') -%> <% } %>
         </div>
       </div>
     </div>

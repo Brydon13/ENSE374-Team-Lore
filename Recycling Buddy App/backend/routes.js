@@ -121,6 +121,34 @@ module.exports = function (app) {
     }
   });
 
+  app.post("/edit-item", async (req, res) => {
+    try {
+      const item = await Recyclable.findById(req.body._id);
+      res.render("edit-item", {
+        item: item,
+        user: req.user,
+      });
+    } catch (e) {
+      res.json({ message: "Error Finding Desired Item" });
+    }
+  });
+
+  app.post("/edit-submit", async (req, res) => {
+    try {
+      const item = await Recyclable.findById(req.body._id);
+      item.title = req.body.title ?? "";
+      item.info = req.body.info ?? "";
+      item.isRecyclable = req.body.recyclable ? true : false;
+      item.manufacturer = req.body.manufacturer ?? "";
+      await item.save();
+      updateJson();
+      res.redirect("/");
+    } catch (e) {
+      console.log(e);
+      res.json({ message: "Error Editing Item" });
+    }
+  });
+
   app.get("/logout", function (req, res, next) {
     req.logout(function (err) {
       if (err) {
