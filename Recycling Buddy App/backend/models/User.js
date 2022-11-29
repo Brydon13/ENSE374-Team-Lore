@@ -3,9 +3,6 @@ const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new mongoose.Schema(
   {
-    email: {
-      type: String,
-    },
     username: {
       type: String,
     },
@@ -13,6 +10,12 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     avatar: {
+      type: String,
+    },
+    salt: {
+      type: String,
+    },
+    hash: {
       type: String,
     },
     isAdmin: {

@@ -41,7 +41,7 @@ async function initializeDB() {
 }
 
 async function updateJson() {
-  const users = await User.find();
+  const users = await User.find().select("+salt +hash");
   const recyclables = await Recyclable.find();
 
   const db = {

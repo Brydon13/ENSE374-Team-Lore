@@ -25,6 +25,7 @@ body {
   width: 300px;
   margin-top: 5px;
   margin-bottom: 15px;
+  padding-left: 5px;
 }
 
 .black-btn {
@@ -60,6 +61,7 @@ body {
   background: #1a8754;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #header {
@@ -69,10 +71,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 20px;
 }
 
 .recyclable-question {
   margin-bottom: 5px;
+  display: flex;
 }
 
 #textarea {
@@ -93,18 +97,17 @@ body {
   width: 70px;
   height: 70px;
   margin-left: 30px;
+  position: absolute;
+  left: 0;
 }
 
 #header-logo {
   width: 90px;
   height: 90px;
-  margin-left: 20px;
-  margin-top: 20px;
 }
 
 .nav-links-container {
   display: flex;
-  width: 300px;
   justify-content: space-between;
   font-size: 20px;
   margin-right: 50px;
@@ -205,7 +208,8 @@ body {
   align-items: center;
 }
 
-.single-result-container {
+.single-result-container,
+.info-container {
   margin-top: 20px;
   border-color: lightgrey;
   border-width: 1px;
@@ -219,6 +223,9 @@ body {
   color: #1a8754;
   font-size: 25px;
   text-decoration: underline;
+  border-style: hidden;
+  background-color: white;
+  padding: 0px;
 }
 
 .results-title {
@@ -240,5 +247,99 @@ body {
 
 .no-results {
   font-size: 20px;
+  margin-top: 30px;
+}
+
+.form-container {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 70px 20px;
+  margin-bottom: 50px;
+}
+
+#detail-container {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 70px 20px;
+  margin-bottom: 50px;
+}
+
+#account-container {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 70px 20px;
+  margin-bottom: 50px;
+}
+
+.recyclable-no {
+  margin-right: 10px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.item-details-title,
+.profile-title {
+  font-size: 30px;
+}
+
+.paddingtop20 {
+  padding-top: 20px;
+}
+
+.width90 {
+  width: 90%;
+}
+
+.fontsize20 {
+  font-size: 20px;
+}
+
+.margintop20 {
   margin-top: 20px;
+}
+
+.bold-and-padded {
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+#logo-text {
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  padding-left: 10px;
+  color: #1a8754;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.link {
+  color: #606061;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-left: 50px;
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+#footer-text {
+  color: white;
+  font-size: 18px;
 }

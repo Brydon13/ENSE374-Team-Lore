@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Item</title>
-</head>
-<body class="itempage">
-  <div class="container">
-    <%- include("partials/navbar.ejs") -%>
-    <div class="main-body">
-      <div class="col md-12 text-center text-light">
-        <h5>You are one step closer to make your surroundings more friendly</h5>
-      </div>
-      <form id="search-form" method="POST" action="/temp">
-      <input
-      type="search"
-      name="keyword"
-      id="search-box"
-      placeholder="Search you recycle item here"
-      aria-label="Search through site content"/>
-      <input 
-      type="submit" 
-      id="search-btn" 
-      value="Search" />
-      </form>
-      <hr>    
-      <div class="row bg-white">
-        <div class="col-12 col-md-4">
-          <img src="" class="img-fluid" style="top: 20px;" alt="" >
-        </div>
-      <div class="col-12 col-md-8">
-        <div class="row">
-          <div class="col-12">
-            <h1>Results</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Recycling Buddy</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="flex-wrapper">
+    <div>
+      <%- include("partials/navbar.ejs", {user: user}) -%>
+      <div class="page-container">
+        <div id="detail-container">
+          <div class="item-details-title">Item Details:</div>
+          <div class="info-container width90">
+            <div class="fontsize20 flex-row">
+              <div class="bold-and-padded">Posted By:</div>
+              <%= author %>
+            </div>
           </div>
-          <div class="col-12" style="white-space: pre-line;">
-            <h4>From canned food to soda and aerosol cans, all metal cans -- including aluminum and steel -- are infinitely recyclable. According to the American and Iron Steel Institute, more than 90% of the co-products from the steelmaking process are reused or recycled.</h4>
-          </div>    
+          <div class="info-container width90">
+            <div class="fontsize20 flex-row">
+              <div class="bold-and-padded">Title:</div>
+              <%= item.title %>
+            </div>
+            <div class="fontsize20 margintop20 flex-row">
+              <div class="bold-and-padded">Manufacturer:</div>
+              <%= item.manufacturer %>
+            </div>
+            <div class="fontsize20 margintop20 flex-row">
+              <div class="bold-and-padded">Recyclable:</div>
+              <%= item.isRecyclable ? "Yes" : "No" %>
+            </div>
+            <div class="fontsize20 margintop20 flex-row">
+              <div class="bold-and-padded">Info:</div>
+              <%= item.info %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <%- include("partials/footer.ejs") -%>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <%- include("partials/footer.ejs") -%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

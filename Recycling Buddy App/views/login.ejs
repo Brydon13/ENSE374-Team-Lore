@@ -15,7 +15,7 @@
   </head>
   <body class="flex-wrapper">
     <div>
-      <%- include("partials/navbar.ejs") -%>
+      <%- include("partials/navbar.ejs", {user: null}) -%>
       <div class="page-container">
         <div class="form-container">
           <div class="title"><div>Login</div></div>
@@ -26,16 +26,16 @@
             id="form-container"
           >
             <div>
-              <div>Email:</div>
+              <div>Username:</div>
               <input type="text" name="username" class="input-box" />
             </div>
             <div>
               <div>Password:</div>
-              <input type="text" name="password" class="input-box" />
+              <input type="password" name="password" class="input-box" />
             </div>
             <input type="submit" class="btn btn-success" />
             <div class="foot-note">
-              <div>Dont Have an Account? <a href="/">Signup</a></div>
+              <div>Dont Have an Account? <a href="/signup">Signup</a></div>
             </div>
           </form>
         </div>

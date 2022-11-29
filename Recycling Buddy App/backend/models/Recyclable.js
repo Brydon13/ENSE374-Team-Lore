@@ -8,23 +8,18 @@ const recyclableSchema = new mongoose.Schema(
     },
     title: {
       type: String,
-      required: true,
     },
     info: {
       type: String,
-      required: true,
     },
     isRecyclable: {
       type: Boolean,
-      required: true,
     },
     manufacturer: {
       type: String,
-      required: true,
     },
     isOfficial: {
       type: Boolean,
-      required: true,
     },
   },
   { timestamps: true }
