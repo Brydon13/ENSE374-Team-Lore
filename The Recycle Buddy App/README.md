@@ -13,5 +13,5 @@ Run the command "npm i" and wait for it to install dependencies. Finally, run th
 </li>
  <br/>
 <h3>Warning:</h3>
-As this is just a minimal version of our app, passwords are not well protected. For this reaosn, we highly recommend using non-sensitive credentials.
+As this is just a minimal version of our app, passwords are not well protected. For this reason, we highly recommend using non-sensitive credentials.
 </ol>
