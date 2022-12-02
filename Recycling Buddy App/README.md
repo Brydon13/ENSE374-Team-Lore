@@ -10,6 +10,7 @@ Open the entire project or just this directory in VS Code or another code editor
 <li>
 Run the command "npm i" and wait for it to install dependencies. Finally, run the command "node index.js" and you should be able to access the app at "localhost:3000" in your browser. 
 </li>
-<span style="font-size:20px; color: red;">Warning:</span>
+ <br/>
+<font size="7">Warning</font>
 As this is just a minimal version of our app, passwords are not well protected. For this reaosn, we highly recommend using non-sensitive credentials.
 </ol>
