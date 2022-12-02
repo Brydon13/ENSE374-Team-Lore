@@ -1,0 +1,28 @@
+<header id="header">
+  <div class="flex-row align-center">
+    <div class="logo-container">
+      <image id="header-logo" src="./images/GreenLogo.png"></image>
+      <div id="logo-text">
+        <div>The</div>
+        <div>Recycle</div>
+        <div>Buddy</div>
+      </div>
+    </div>
+    <a href="/" class="link">Home</a>
+    <% if(user) { %>
+    <a href="/profile" class="link">My Posts</a>
+    <% } %>
+  </div>
+  <div class="nav-links-container">
+    <% if(user) { %>
+    <form method="get" action="/logout">
+      <button class="btn btn-success" type="submit">Logout</button>
+    </form>
+    <% } else { %>
+    <form method="get" action="/login">
+      <button class="btn btn-success" type="submit">Login</button>
+    </form>
+    <% } %>
+  </div>
+</header>
+<hr />

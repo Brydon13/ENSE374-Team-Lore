@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Recycle Buddy</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="flex-wrapper">
+    <div>
+      <%- include("partials/navbar.ejs", {user: user}) -%>
+      <div id="home-container">
+        <div class="homepage-text">
+          You are helping us move towards a cleaner future
+        </div>
+        <form
+          id="search-form"
+          method="POST"
+          action="/search"
+          class="input-group mb-3"
+        >
+          <input
+            type="search"
+            name="keyword"
+            class="form-control"
+            id="search-box"
+            placeholder="Search for an item here"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Search</button>
+          </div>
+        </form>
+        <div class="results-container">
+          <div class="flex-row space-between">
+            <div class="results-title">Results:</div>
+            <div class="flex-row align-center">
+              <span id="notice-something-missing"
+                >Notice Something Missing?
+              </span>
+              <form method="get" action="/add-item">
+                <button class="btn btn-success" type="submit">
+                  Add an Item
+                </button>
+              </form>
+            </div>
+          </div>
+          <% if(results.length == 0) { %> <% if(searched) { %>
+          <div class="no-results">No Results</div>
+          <% } else { %>
+          <div class="no-results">(Search Results Will Be Displayed Here)</div>
+          <% } %> <% } else { %> <%- results.map(item =>
+          include("partials/search-result.ejs", {item: item, edit:
+          false})).join(' ') -%> <% } %>
+        </div>
+      </div>
+    </div>
+    <%- include("partials/footer.ejs") -%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
