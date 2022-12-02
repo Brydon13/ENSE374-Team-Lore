@@ -17,6 +17,9 @@ Ultimately the reason "why" we have chosen this idea, is to raise awareness and 
 
 <h3>Progress Vlogs</h3>
 Introduction: https://www.youtube.com/watch?v=-dm0M1BaA34
+<br/>
 Planning: https://www.youtube.com/watch?v=S7NPCo9r7hY
+<br/>
 Diagramming and Prototyping: https://youtu.be/0PG-ZGdGKwk
+<br/>
 Final Product Commercial: https://www.youtube.com/watch?v=7Ld0DCyQkfk
