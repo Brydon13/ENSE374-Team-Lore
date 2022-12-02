@@ -2,6 +2,7 @@
 <ol>
 <li>
 Install and run MongoDB Community Edition following steps based on your operating system outlined here: https://www.mongodb.com/docs/manual/administration/install-community/
+ <br/>
 Unfortunately, this is required to use our database, and the app will not work without mongod running in the background. 
 </li>
 <li>
